@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .info-container {
+    display: flex;
+    margin-top: 1.5rem;
+    width: 100%;
+
+    .left-container {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      flex: 1;
+      padding-left: 8rem;
+
+      .title {
+        margin-top: 5rem;
+        h1 {
+          font-size: calc(3.2rem + 1vw + 1vh);
+          color: $Dark-Violet;
+          font-weight: 700;
+          line-height: 5.3rem;
+        }
+      }
+      .infoTextContainer {
+        margin-top: 0.5rem;
+        p {
+          color: $Grayish-Violet;
+          font-size: calc(0.75rem + 0.4vh + 0.4vw);
+          font-weight: 500;
+        }
+      }
+      button {
+        height: 2.8rem;
+        width: calc(7.5rem + 2vh + 2vw);
+        border-radius: 30px;
+        background-color: $Cyan;
+        color: white;
+        font-weight: 500;
+        font-size: calc(0.5rem + 0.4vh + 0.4vw);
+        margin-top: 3rem;
+        border: none;
+        outline: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .right-container {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+  }
+}
