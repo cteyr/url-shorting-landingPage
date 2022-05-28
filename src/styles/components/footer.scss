@@ -11,47 +11,27 @@
   }
   .container-right {
     display: flex;
-    gap: 4rem;
+    gap: 3.5rem;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+
+    li {
+      display: flex;
+      color: $Gray;
+    }
 
     .feature {
       color: white;
-
-      h4 {
-        margin-bottom: 1rem;
-      }
-
-      li {
-        display: flex;
-        color: $Gray;
-        margin-bottom: 0.5rem;
-      }
     }
 
     .resources {
       color: white;
-
-      h4 {
-        margin-bottom: 1rem;
-      }
-
-      li {
-        color: $Gray;
-        display: flex;
-        margin-bottom: 0.5rem;
-      }
     }
 
     .company {
       color: white;
-      h4 {
-        margin-bottom: 1rem;
-      }
-
-      li {
-        display: flex;
-        color: $Gray;
-        margin-bottom: 0.5rem;
-      }
     }
 
     .redes-sociales {
