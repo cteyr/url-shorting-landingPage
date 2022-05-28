@@ -38,8 +38,10 @@ const MainContainer = () => {
       </div>
       <div className="center-div">
         <img src={backgroundCenter} alt="" />
-        <Input />
-        <ButtonShort />
+        <div className="center-div-input-button">
+          <Input />
+          <ButtonShort />
+        </div>
       </div>
       <div className="botton-container">
         <div className="tittle">
