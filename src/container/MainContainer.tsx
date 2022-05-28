@@ -1,6 +1,7 @@
 import { NavBar } from "../components/NavBar";
 import { Input } from "../components/Input";
 import { Footer } from "../components/Footer";
+import { ButtonShort } from "../components/ButtonShort";
 //@ts-ignore
 import working from "./../assets/images/illustration-working.svg";
 //@ts-ignore
@@ -38,6 +39,7 @@ const MainContainer = () => {
       <div className="center-div">
         <img src={backgroundCenter} alt="" />
         <Input />
+        <ButtonShort />
       </div>
       <div className="botton-container">
         <div className="tittle">

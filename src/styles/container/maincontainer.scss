@@ -93,22 +93,22 @@
     }
     .container-statistics {
       display: flex;
-      width: 80%;
+      width: 78%;
       margin-top: 2rem;
       background-color: transparent;
       justify-content: space-between;
       position: relative;
 
       .interline-blue {
-        top: 40%;
+        top: 44%;
         position: absolute;
         height: 0.5rem;
-        width: 80%;
+        width: 100%;
         background-color: $Cyan;
       }
 
       .left-container {
-        width: 21rem;
+        width: 20rem;
         background-color: transparent;
         position: relative;
         padding-top: 1rem;
@@ -149,7 +149,7 @@
         background-color: transparent;
         position: relative;
         padding: 1rem;
-        margin-top: 1rem;
+        margin-top: 2rem;
 
         .icon {
           display: flex;
@@ -185,7 +185,7 @@
         background-color: transparent;
         position: relative;
         margin-top: 2rem;
-        padding-top: 1rem;
+        padding-top: 3rem;
         padding-bottom: 1rem;
         padding-left: 1rem;
 
@@ -204,13 +204,15 @@
           display: flex;
           justify-content: left;
           flex-direction: column;
-          padding: 2rem 1.5rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          padding-bottom: 2rem;
           margin-top: 2rem;
           width: 100%;
           background-color: white;
 
           h3 {
-            margin-top: 2rem;
+            margin-top: 4rem;
           }
           p {
             margin-top: 1rem;
@@ -250,9 +252,10 @@
       outline: none;
       border-radius: 30px;
       color: white;
-    }
-    button:hover {
-      cursor: pointer;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
