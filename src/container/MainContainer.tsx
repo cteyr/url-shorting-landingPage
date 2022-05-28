@@ -1,5 +1,6 @@
 import { NavBar } from "../components/NavBar";
 import { Input } from "../components/Input";
+import { Footer } from "../components/Footer";
 //@ts-ignore
 import working from "./../assets/images/illustration-working.svg";
 //@ts-ignore
@@ -10,6 +11,8 @@ import recognition from "./../assets/images/icon-brand-recognition.svg";
 import record from "./../assets/images/icon-detailed-records.svg";
 //@ts-ignore
 import customizable from "./../assets/images/icon-fully-customizable.svg";
+//@ts-ignore
+import boost from "./../assets/images/bg-boost-desktop.svg";
 
 const MainContainer = () => {
   return (
@@ -66,9 +69,9 @@ const MainContainer = () => {
             <div className="text-container">
               <h3>Detailed Records</h3>
               <p>
-                Boost your brand recognition with each click. Generic link don't
-                mean a thing. Branded links help instil confidence in your
-                content.
+                Gain insights intowho is clicking your links. Knowing when and
+                where people engage with your content helps inform better
+                decisions.
               </p>
             </div>
           </div>
@@ -79,14 +82,21 @@ const MainContainer = () => {
             <div className="text-container">
               <h3>Fully Customizable</h3>
               <p>
-                Boost your brand recognition with each click. Generic link don't
-                mean a thing. Branded links help instil confidence in your
-                content.
+                Improve brand awareness and content discoverability through
+                customizable links, supercharging audience engagement.
               </p>
             </div>
           </div>
         </div>
       </div>
+      <div className="top-footer">
+        <div className="image-footer">
+          <img src={boost} alt="" />
+        </div>
+        <h1>Boost your links today</h1>
+        <button type="button">Get Started</button>
+      </div>
+      <Footer />
     </div>
   );
 };
