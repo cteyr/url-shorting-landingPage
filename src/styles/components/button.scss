@@ -1,0 +1,48 @@
+.button-short {
+  border-radius: 5px;
+  height: 40%;
+  width: 8rem;
+  border: none;
+  outline: none;
+  background-color: $Cyan;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.top-container-button {
+  height: 2.8rem;
+  width: calc(7.5rem + 2vh + 2vw);
+  border-radius: 30px;
+  background-color: $Cyan;
+  color: white;
+  font-weight: 500;
+  font-size: calc(0.5rem + 0.4vh + 0.4vw);
+  margin-top: 3rem;
+  border: none;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.top-footer-button {
+  position: absolute;
+  margin-top: 4.5rem;
+  height: 2.8rem;
+  width: calc(7.5rem + 2vh + 2vw);
+  font-weight: 500;
+  font-size: calc(0.5rem + 0.4vh + 0.4vw);
+  background-color: $Cyan;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

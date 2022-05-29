@@ -1,6 +1,8 @@
 //@ts-ignore
 import logo from "./../assets/images/logo.svg";
 
+import { Button } from "./../components/Button";
+
 const NavBar = () => {
   return (
     <div className="navbar">
@@ -15,12 +17,8 @@ const NavBar = () => {
         </div>
       </div>
       <div className="session-container">
-        <button className="login" type="button">
-          Login
-        </button>
-        <button className="signup" type="button">
-          Sign Up
-        </button>
+        <Button classname="login" text="Login" />
+        <Button classname="signup" text="Sign up" />
       </div>
     </div>
   );

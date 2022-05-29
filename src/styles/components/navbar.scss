@@ -40,6 +40,10 @@
       border-radius: 20px;
       border: none;
       outline: none;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
     .signup {
       width: 5.5rem;
@@ -51,9 +55,10 @@
       border-radius: 20px;
       border: none;
       outline: none;
-    }
-    :hover {
-      cursor: pointer;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
