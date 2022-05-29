@@ -1,7 +1,7 @@
 import { NavBar } from "../components/NavBar";
 import { Input } from "../components/Input";
 import { Footer } from "../components/Footer";
-import { ButtonShort } from "../components/ButtonShort";
+import { Button } from "../components/Button";
 //@ts-ignore
 import working from "./../assets/images/illustration-working.svg";
 //@ts-ignore
@@ -30,7 +30,7 @@ const MainContainer = () => {
               insights on how your links are performing.
             </p>
           </div>
-          <button type="button">Get Started</button>
+          <Button classname="top-container-button" text="Get Started" />
         </div>
         <div className="right-container">
           <img src={working} alt="" />
@@ -40,7 +40,7 @@ const MainContainer = () => {
         <img src={backgroundCenter} alt="" />
         <div className="center-div-input-button">
           <Input />
-          <ButtonShort />
+          <Button classname="button-short" text="Shorten It!" />
         </div>
       </div>
       <div className="botton-container">
@@ -98,7 +98,7 @@ const MainContainer = () => {
           <img src={boost} alt="" />
         </div>
         <h1>Boost your links today</h1>
-        <button type="button">Get Started</button>
+        <Button classname="top-footer-button" text="Get Started" />
       </div>
       <Footer />
     </div>
