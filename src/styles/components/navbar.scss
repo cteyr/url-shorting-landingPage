@@ -41,7 +41,10 @@
     display: flex;
     margin-bottom: 0.5rem;
     color: $Grayish-Violet;
-    //background-color: red;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }
 .session-container {
