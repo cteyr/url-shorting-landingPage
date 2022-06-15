@@ -1,8 +1,6 @@
 //@ts-ignore
 import logo from "./../assets/images/logo.svg";
-
-import { HiMenu } from "react-icons/Hi";
-
+import { HiMenu } from "react-icons/hi";
 import { Button } from "./../components/Button";
 
 const NavBar = () => {
