@@ -1,10 +1,16 @@
 .footer {
   display: flex;
-  // height: 20rem;
   width: 100%;
   padding: 3rem 8rem;
   background-color: $Very-Dark-Violet;
   gap: 18rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
 
   .container-left {
     color: white;
@@ -12,6 +18,12 @@
   .container-right {
     display: flex;
     gap: 3.5rem;
+
+    @media screen and (max-width: 768px) {
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+    }
 
     h4 {
       margin-bottom: 1rem;
@@ -21,24 +33,51 @@
       display: flex;
       color: $Gray;
       margin-bottom: 0.5rem;
+
+      @media screen and (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     .feature {
       color: white;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
     }
 
     .resources {
       color: white;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
     }
 
     .company {
       color: white;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
     }
 
     .redes-sociales {
       display: flex;
       column-gap: 1.5rem;
       height: 2rem;
+
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 }

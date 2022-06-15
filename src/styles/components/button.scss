@@ -7,6 +7,12 @@
   background-color: $Cyan;
   color: white;
 
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -23,6 +29,13 @@
   margin-top: 3rem;
   border: none;
   outline: none;
+
+  @media screen and (max-width: 768px) {
+    height: 3.5rem;
+    width: 10rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
 
   &:hover {
     cursor: pointer;
@@ -41,6 +54,12 @@
   outline: none;
   border-radius: 30px;
   color: white;
+
+  @media screen and (max-width: 768px) {
+    width: 10rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
 
   &:hover {
     cursor: pointer;
