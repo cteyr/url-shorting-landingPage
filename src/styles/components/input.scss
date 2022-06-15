@@ -11,11 +11,13 @@ input {
   @media screen and (max-width: 768px) {
     height: 100%;
     width: 100%;
+    font-size: 14px;
   }
 }
 ::placeholder {
   position: absolute;
   transform: translateY(+66%);
+  text-indent: 1rem;
   @media screen and (max-width: 768px) {
     font-size: 1rem;
     transform: translateY(+45%);
