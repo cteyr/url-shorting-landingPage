@@ -7,8 +7,17 @@ input {
   border: none;
   outline: none;
   text-indent: 1rem;
+
+  @media screen and (max-width: 768px) {
+    height: 100%;
+    width: 100%;
+  }
 }
 ::placeholder {
   position: absolute;
-  top: 36%;
+  transform: translateY(+66%);
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    transform: translateY(+45%);
+  }
 }
