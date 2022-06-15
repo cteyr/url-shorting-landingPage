@@ -1,6 +1,8 @@
 //@ts-ignore
 import logo from "./../assets/images/logo.svg";
 
+import { HiMenu } from "react-icons/Hi";
+
 import { Button } from "./../components/Button";
 
 const NavBar = () => {
@@ -15,6 +17,9 @@ const NavBar = () => {
           <a href="#">Pricing</a>
           <a href="#">Resources</a>
         </div>
+      </div>
+      <div className="menu-seccion-container">
+        <HiMenu size={35} />
       </div>
       <div className="session-container">
         <Button classname="login" text="Login" />

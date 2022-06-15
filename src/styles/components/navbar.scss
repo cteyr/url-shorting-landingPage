@@ -35,6 +35,15 @@
     }
   }
 }
+.menu-seccion-container {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    margin-bottom: 0.5rem;
+    color: $Grayish-Violet;
+    //background-color: red;
+  }
+}
 .session-container {
   display: flex;
   gap: 1.5rem;
