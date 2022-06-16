@@ -60,9 +60,12 @@ const MainContainer = () => {
 
   return (
     <div className="container">
-      <NavBar onClick={handleClickMenu} />
+      <NavBar
+        onClick={handleClickMenu}
+        classname={`${visibleMenu ? "visible" : "invisible"}`}
+      />
       <div className="top-container">
-        <div className="left-container">
+        <div className={`left-container ${visibleMenu ? "margin-top" : ""}`}>
           <div className="title">
             <h1>More than just shorter links</h1>
           </div>
