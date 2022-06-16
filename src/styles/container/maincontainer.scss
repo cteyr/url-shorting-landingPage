@@ -79,9 +79,7 @@
 
       @media screen and (max-width: 768px) {
         margin-left: 1rem;
-        img {
-          display: inherit;
-        }
+        display: inherit;
       }
     }
 
@@ -92,10 +90,7 @@
 
       @media screen and (max-width: 768px) {
         margin-left: 1rem;
-
-        img {
-          display: none;
-        }
+        display: none;
       }
     }
   }
