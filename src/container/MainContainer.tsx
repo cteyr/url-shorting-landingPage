@@ -3,7 +3,7 @@ import { Input } from "../components/Input";
 import { Footer } from "../components/Footer";
 import { Button } from "../components/Button";
 import { api } from "../api/api";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 //@ts-ignore
 import working from "./../assets/images/illustration-working.svg";
 //@ts-ignore
@@ -22,6 +22,11 @@ const MainContainer = () => {
   const [InputValue, setInputValue] = useState("");
   const [Error, setError] = useState(null);
   const [ShortLink, setShortLink] = useState(null);
+  const [visibleMenu, setvisibleMenu] = useState(false);
+
+  const handleClickMenu = () => {
+    setvisibleMenu(!visibleMenu);
+  };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
@@ -55,7 +60,7 @@ const MainContainer = () => {
 
   return (
     <div className="container">
-      <NavBar />
+      <NavBar onClick={handleClickMenu} />
       <div className="top-container">
         <div className="left-container">
           <div className="title">
@@ -69,7 +74,9 @@ const MainContainer = () => {
           </div>
           <Button classname="top-container-button" text="Get Started" />
         </div>
-        <div className="right-container">
+        <div
+          className={`right-container ${visibleMenu ? "invisible" : "visible"}`}
+        >
           <img src={working} alt="" />
         </div>
       </div>

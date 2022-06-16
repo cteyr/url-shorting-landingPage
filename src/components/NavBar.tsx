@@ -3,7 +3,7 @@ import logo from "./../assets/images/logo.svg";
 import { HiMenu } from "react-icons/hi";
 import { Button } from "./../components/Button";
 
-const NavBar = () => {
+const NavBar = ({ onClick }: Iprops) => {
   return (
     <div className="navbar">
       <div className="navbar-container">
@@ -17,7 +17,7 @@ const NavBar = () => {
         </div>
       </div>
       <div className="menu-seccion-container">
-        <HiMenu size={35} />
+        <HiMenu size={35} onClick={onClick} />
       </div>
       <div className="session-container">
         <Button classname="login" text="Login" />
@@ -26,5 +26,7 @@ const NavBar = () => {
     </div>
   );
 };
-
+type Iprops = {
+  onClick: () => void;
+};
 export { NavBar };

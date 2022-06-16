@@ -72,13 +72,30 @@
         }
       }
     }
-    .right-container {
+    .right-container.visible {
       display: flex;
       flex: 1;
       overflow: hidden;
 
       @media screen and (max-width: 768px) {
         margin-left: 1rem;
+        img {
+          display: inherit;
+        }
+      }
+    }
+
+    .right-container.invisible {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+
+      @media screen and (max-width: 768px) {
+        margin-left: 1rem;
+
+        img {
+          display: none;
+        }
       }
     }
   }
@@ -88,7 +105,7 @@
     margin-left: 8rem;
     width: 80%;
     height: 7rem;
-    bottom: -4rem;
+    bottom: -3.5rem;
     border-radius: 5px;
     background-color: $Dark-Violet;
 
@@ -96,6 +113,7 @@
       margin-left: 0;
       width: 90%;
       height: 9rem;
+      bottom: -4.5rem;
     }
 
     .center-div-input-button {
