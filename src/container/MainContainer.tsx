@@ -65,7 +65,7 @@ const MainContainer = () => {
         classname={`${visibleMenu ? "visible" : "invisible"}`}
       />
       <div className="top-container">
-        <div className={`left-container ${visibleMenu ? "margin-top" : ""}`}>
+        <div className={`left-container`}>
           <div className="title">
             <h1>More than just shorter links</h1>
           </div>
@@ -77,9 +77,7 @@ const MainContainer = () => {
           </div>
           <Button classname="top-container-button" text="Get Started" />
         </div>
-        <div
-          className={`right-container ${visibleMenu ? "invisible" : "visible"}`}
-        >
+        <div className={`right-container`}>
           <img src={working} alt="" />
         </div>
       </div>
