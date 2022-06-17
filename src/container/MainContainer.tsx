@@ -37,7 +37,7 @@ const MainContainer = () => {
 
     if (error) {
       setError(error);
-      console.log("Hola" + Error);
+      alert(Error + " (Too Many Requests)");
     } else {
       setShortLink(response as ShortLink);
       console.log(ShortLink?.result.original_link);
@@ -46,7 +46,13 @@ const MainContainer = () => {
   };
 
   const HandleClick = () => {
-    handleResponse(InputValue);
+    if (InputValue.includes("http") || InputValue.includes("https")) {
+      handleResponse(InputValue);
+      setInputValue("");
+    } else {
+      alert("Please enter a valid URL");
+      setInputValue("");
+    }
   };
 
   return (
@@ -84,6 +90,8 @@ const MainContainer = () => {
         </div>
       </div>
       <div className="botton-container">
+        <div className="shortcut-link"></div>
+
         <div className="tittle">
           <h1>Advances Statistics </h1>
           <p>
