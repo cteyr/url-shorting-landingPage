@@ -40,22 +40,13 @@ const MainContainer = () => {
       console.log("Hola" + Error);
     } else {
       setShortLink(response as ShortLink);
-      console.log("Hola" + ShortLink);
+      console.log(ShortLink?.result.original_link);
+      console.log(ShortLink?.result.full_short_link);
     }
   };
 
   const HandleClick = () => {
-    if (InputValue.includes("http://") == true) {
-      const newt = InputValue.split("http://");
-      handleResponse(newt[1]);
-    } else if (InputValue.includes("https://") == true) {
-      const newt = InputValue.split("https://");
-      handleResponse(newt[1]);
-    } else {
-      alert("invalid url");
-    }
-
-    //  return InputValue;
+    handleResponse(InputValue);
   };
 
   return (

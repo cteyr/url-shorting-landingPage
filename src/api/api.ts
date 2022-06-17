@@ -8,13 +8,12 @@ const request = async (
     method: Method = "GET"
   ): Promise<IResponse> => {
     try {
-      const response = await fetch(`${BASE_API_URL}/shorten?url=${path}`, {
+      const response = await fetch(`https://cors-anywhere.herokuapp.com/${BASE_API_URL}/shorten?url=${path}`, {
         method,
         headers: { "Content-Type": "application/json" },
       });
       const responseBody = await response.json();
 
-      console.log("Hola"+responseBody);
       return {response:responseBody, error:null};
     } catch (error) {
       return  {response:null, error} ;
