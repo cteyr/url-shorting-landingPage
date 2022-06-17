@@ -40,8 +40,10 @@ const MainContainer = () => {
       alert(Error + " (Too Many Requests)");
     } else {
       setShortLink(response as ShortLink);
-      console.log(ShortLink?.result.original_link);
-      console.log(ShortLink?.result.full_short_link);
+      var original_link = ShortLink?.result.original_link;
+      var short_link = ShortLink?.result.short_link;
+      //  console.log(ShortLink?.result.original_link);
+      // console.log(ShortLink?.result.full_short_link);
     }
   };
 
@@ -90,7 +92,20 @@ const MainContainer = () => {
         </div>
       </div>
       <div className="botton-container">
-        <div className="shortcut-link"></div>
+        <div className="list-shortcut-links">
+          <div className="shortcut-link">
+            <div className="original-link">
+              {ShortLink?.result.original_link}
+            </div>
+            <div className="short-link">
+              <a href={ShortLink?.result.full_short_link} target="_blank">
+                {ShortLink?.result.full_short_link}
+              </a>
+
+              <Button text="Copy" classname="button-copy-shortlink" />
+            </div>
+          </div>
+        </div>
 
         <div className="tittle">
           <h1>Advances Statistics </h1>

@@ -65,3 +65,22 @@
     cursor: pointer;
   }
 }
+
+.button-copy-shortlink {
+  margin-left: 1rem;
+  padding: 0.3rem 1.5rem;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background-color: $Cyan;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 0rem;
+    width: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
