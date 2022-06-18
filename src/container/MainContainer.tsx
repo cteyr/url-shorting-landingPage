@@ -56,7 +56,9 @@ const MainContainer = () => {
       InputValue.includes("http") ||
       InputValue.includes("https") ||
       InputValue.includes("Http") ||
-      InputValue.includes("Https")
+      InputValue.includes("Https") ||
+      InputValue.includes("www") ||
+      InputValue.includes("Www")
     ) {
       handleResponse(InputValue);
       setInputValue("");
