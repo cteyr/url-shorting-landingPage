@@ -1,6 +1,7 @@
 import { ShortLink } from "../types";
 
 const BASE_API_URL = "https://api.shrtco.de/v2";
+const Server_Herokuapp ="https://cors-anywhere.herokuapp.com";
 
 
 const request = async (
@@ -8,7 +9,7 @@ const request = async (
     method: Method = "GET"
   ): Promise<IResponse> => {
     try {
-      const response = await fetch(`${BASE_API_URL}/shorten?url=${path}`, {
+      const response = await fetch(`${Server_Herokuapp}/${BASE_API_URL}/shorten?url=${path}`, {
         method,
         headers: { "Content-Type": "application/json" },
       });
