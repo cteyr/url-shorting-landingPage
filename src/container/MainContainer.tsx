@@ -21,7 +21,8 @@ import { ShortLink } from "../types";
 const MainContainer = () => {
   const [InputValue, setInputValue] = useState("");
   const [Error, setError] = useState(null);
-  const [ShortLink, setShortLink] = useState(null);
+  const [shortLink, setShortLink] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [visibleMenu, setvisibleMenu] = useState(false);
 
   const handleClickMenu = () => {
@@ -34,21 +35,29 @@ const MainContainer = () => {
 
   const handleResponse = async (path: string) => {
     const { response, error } = await api.get(path);
-
+    // setIsLoading(false);
     if (error) {
       setError(error);
       alert(Error + " (Too Many Requests)");
+      // setIsLoading(false);
     } else {
-      setShortLink(response as ShortLink);
-      var original_link = ShortLink?.result.original_link;
-      var short_link = ShortLink?.result.short_link;
-      //  console.log(ShortLink?.result.original_link);
-      // console.log(ShortLink?.result.full_short_link);
+      setShortLink((prev) => [...prev, response]);
     }
   };
 
+  useEffect(() => {
+    if (shortLink.length) {
+      //setIsLoading(false);
+    }
+  }, [shortLink]);
+
   const HandleClick = () => {
-    if (InputValue.includes("http") || InputValue.includes("https")) {
+    if (
+      InputValue.includes("http") ||
+      InputValue.includes("https") ||
+      InputValue.includes("Http") ||
+      InputValue.includes("Https")
+    ) {
       handleResponse(InputValue);
       setInputValue("");
     } else {
@@ -93,18 +102,23 @@ const MainContainer = () => {
       </div>
       <div className="botton-container">
         <div className="list-shortcut-links">
-          <div className="shortcut-link">
-            <div className="original-link">
-              {ShortLink?.result.original_link}
-            </div>
-            <div className="short-link">
-              <a href={ShortLink?.result.full_short_link} target="_blank">
-                {ShortLink?.result.full_short_link}
-              </a>
-
-              <Button text="Copy" classname="button-copy-shortlink" />
-            </div>
-          </div>
+          {isLoading ? (
+            <span>Loading...</span>
+          ) : (
+            shortLink?.map((element) => (
+              <div className="shortcut-link">
+                <div className="original-link">
+                  {element.result.original_link}
+                </div>
+                <div className="short-link">
+                  <a href={element.result.full_short_link} target="_blank">
+                    {element.result.full_short_link}
+                  </a>
+                  <Button text="Copy" classname="button-copy-shortlink" />
+                </div>
+              </div>
+            ))
+          )}
         </div>
 
         <div className="tittle">
