@@ -26,13 +26,6 @@ const MainContainer = () => {
   const [visibleMenu, setvisibleMenu] = useState(false);
   const [visibleAlert, setvisibleAlert] = useState(false);
 
-  const link = () => {
-    window.location.href = "https://cors-anywhere.herokuapp.com";
-  };
-
-  //href = "https://cors-anywhere.herokuapp.com/corsdemo";
-  //var a = https://cors-anywhere.herokuapp.com;
-
   const handleClickMenu = () => {
     setvisibleMenu(!visibleMenu);
   };
@@ -56,7 +49,7 @@ const MainContainer = () => {
       // setIsLoading(false);
     } else {
       setvisibleAlert(false);
-      setShortLink((prev) => [...prev, response]);
+      setShortLink((prev) => [response, ...prev]);
     }
   };
 
