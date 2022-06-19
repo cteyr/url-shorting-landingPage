@@ -141,7 +141,15 @@ const MainContainer = () => {
                   <a href={element.result.full_short_link} target="_blank">
                     {element.result.full_short_link}
                   </a>
-                  <Button text="Copy" classname="button-copy-shortlink" />
+                  <Button
+                    text="Copy"
+                    classname="button-copy-shortlink"
+                    onclick={() =>
+                      navigator.clipboard.writeText(
+                        `${element.result.full_short_link}`
+                      )
+                    }
+                  />
                 </div>
               </div>
             ))
