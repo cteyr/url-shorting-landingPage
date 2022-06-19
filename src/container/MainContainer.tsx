@@ -55,6 +55,7 @@ const MainContainer = () => {
       setvisibleAlert(true);
       // setIsLoading(false);
     } else {
+      setvisibleAlert(false);
       setShortLink((prev) => [...prev, response]);
     }
   };
