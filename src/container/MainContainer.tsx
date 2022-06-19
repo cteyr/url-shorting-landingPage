@@ -33,12 +33,18 @@ const MainContainer = () => {
     setInputValue(event.target.value);
   };
 
+  const handleSubmit = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      HandleClick();
+    }
+  };
+
   const handleResponse = async (path: string) => {
     const { response, error } = await api.get(path);
     // setIsLoading(false);
     if (error) {
       setError(error);
-      alert(Error + " (Too Many Requests)");
+      alert(Error);
       // setIsLoading(false);
     } else {
       setShortLink((prev) => [...prev, response]);
@@ -94,7 +100,11 @@ const MainContainer = () => {
       <div className="center-div">
         <img src={backgroundCenter} alt="" />
         <div className="center-div-input-button">
-          <Input InputValue={InputValue} handleInputChange={handleChange} />
+          <Input
+            InputValue={InputValue}
+            handleInputChange={handleChange}
+            handleAddShortLink={handleSubmit}
+          />
           <Button
             classname="button-short"
             text="Shorten It!"
@@ -107,8 +117,8 @@ const MainContainer = () => {
           {isLoading ? (
             <span>Loading...</span>
           ) : (
-            shortLink?.map((element) => (
-              <div className="shortcut-link">
+            shortLink?.map((element, index) => (
+              <div className="shortcut-link" key={index}>
                 <div className="original-link">
                   {element.result.original_link}
                 </div>
