@@ -112,6 +112,23 @@
       background-color: transparent;
       gap: 2rem;
 
+      .alert-link {
+        position: absolute;
+        margin-top: 13rem;
+        font-size: 1rem;
+        color: black;
+        text-align: center;
+        background-color: transparent;
+
+        a {
+          color: $Cyan;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 0.8rem;
+          margin-top: 14rem;
+        }
+      }
+
       @media screen and (max-width: 768px) {
         flex-direction: column;
         align-items: center;

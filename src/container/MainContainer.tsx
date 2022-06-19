@@ -24,6 +24,14 @@ const MainContainer = () => {
   const [shortLink, setShortLink] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [visibleMenu, setvisibleMenu] = useState(false);
+  const [visibleAlert, setvisibleAlert] = useState(false);
+
+  const link = () => {
+    window.location.href = "https://cors-anywhere.herokuapp.com";
+  };
+
+  //href = "https://cors-anywhere.herokuapp.com/corsdemo";
+  //var a = https://cors-anywhere.herokuapp.com;
 
   const handleClickMenu = () => {
     setvisibleMenu(!visibleMenu);
@@ -44,7 +52,7 @@ const MainContainer = () => {
     // setIsLoading(false);
     if (error) {
       setError(error);
-      alert(Error);
+      setvisibleAlert(true);
       // setIsLoading(false);
     } else {
       setShortLink((prev) => [...prev, response]);
@@ -110,6 +118,19 @@ const MainContainer = () => {
             text="Shorten It!"
             onclick={HandleClick}
           />
+
+          {visibleAlert && (
+            <span className="alert-link">
+              {"To use this application go to "}
+              <a
+                href=" https://cors-anywhere.herokuapp.com/corsdemo"
+                target="_blank"
+              >
+                https://cors-anywhere.herokuapp.com/corsdemo
+              </a>
+              {" and request temporary access to the demo server"}
+            </span>
+          )}
         </div>
       </div>
       <div className="botton-container">
