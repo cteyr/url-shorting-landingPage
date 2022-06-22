@@ -133,7 +133,9 @@ const MainContainer = () => {
           {isLoading ? (
             <span>Loading...</span>
           ) : (
-            shortLink?.map((element) => <LinkItems element={element} />)
+            shortLink?.map((element) => (
+              <LinkItems key={element} element={element} />
+            ))
           )}
         </div>
 
