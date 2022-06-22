@@ -163,6 +163,7 @@
       background-color: transparent;
 
       .short-link {
+        display: flex;
         a {
           color: $Cyan;
         }
@@ -198,6 +199,7 @@
         }
 
         .short-link {
+          display: flex;
           @media screen and (max-width: 768px) {
             display: flex;
             flex-direction: column;

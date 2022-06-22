@@ -8,7 +8,8 @@ const Button = ({ classname, text, onclick }: IProps) => {
 
 type IProps = {
   classname: string;
-  text: string;
+  text: any;
+
   onclick?: () => void;
 };
 export { Button };

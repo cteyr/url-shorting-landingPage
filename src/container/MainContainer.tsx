@@ -1,5 +1,6 @@
 import { NavBar } from "../components/NavBar";
 import { Input } from "../components/Input";
+import { LinkItems } from "../components/LinkItem";
 import { Footer } from "../components/Footer";
 import { Button } from "../components/Button";
 import { api } from "../api/api";
@@ -132,27 +133,7 @@ const MainContainer = () => {
           {isLoading ? (
             <span>Loading...</span>
           ) : (
-            shortLink?.map((element, index) => (
-              <div className="shortcut-link" key={index}>
-                <div className="original-link">
-                  {element.result.original_link}
-                </div>
-                <div className="short-link">
-                  <a href={element.result.full_short_link} target="_blank">
-                    {element.result.full_short_link}
-                  </a>
-                  <Button
-                    text="Copy"
-                    classname="button-copy-shortlink"
-                    onclick={() =>
-                      navigator.clipboard.writeText(
-                        `${element.result.full_short_link}`
-                      )
-                    }
-                  />
-                </div>
-              </div>
-            ))
+            shortLink?.map((element) => <LinkItems element={element} />)
           )}
         </div>
 
