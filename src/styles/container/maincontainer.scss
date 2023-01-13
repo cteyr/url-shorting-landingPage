@@ -23,6 +23,7 @@
       align-items: left;
       flex: 1;
       padding-left: 8rem;
+      padding-right: 2vw;
 
       @media screen and (max-width: 768px) {
         padding-left: 0;
@@ -88,14 +89,14 @@
     display: flex;
     position: relative;
     margin-left: 8rem;
-    width: 80%;
+    margin-right: 8rem;
+    width: auto;
     height: 7rem;
     bottom: -3.5rem;
     border-radius: 5px;
     background-color: $Dark-Violet;
 
     @media screen and (max-width: 768px) {
-      margin-left: 0;
       width: 90%;
       height: 9rem;
       bottom: -4.5rem;
