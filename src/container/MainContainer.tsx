@@ -16,7 +16,7 @@ import record from "./../assets/images/icon-detailed-records.svg";
 //@ts-ignore
 import customizable from "./../assets/images/icon-fully-customizable.svg";
 //@ts-ignore
-import boost from "./../assets/images/bg-boost-desktop.svg";
+ //import boost from "./../assets/images/bg-boost-desktop.svg";
 import { ShortLink } from "../types";
 
 const MainContainer = () => {
@@ -190,7 +190,7 @@ const MainContainer = () => {
       </div>
       <div className="top-footer">
         <div className="image-footer">
-          <img src={boost} alt="" />
+              <div className="img-boost"></div>
         </div>
         <h1>Boost your links today</h1>
         <Button classname="top-footer-button" text="Get Started" />
