@@ -1,9 +1,10 @@
 .footer {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   padding: 3rem 8rem;
   background-color: $Very-Dark-Violet;
-  gap: 18rem;
+  //gap: 18rem;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -17,7 +18,7 @@
   }
   .container-right {
     display: flex;
-    gap: 3.5rem;
+    gap: 5rem;
 
     @media screen and (max-width: 768px) {
       align-items: center;
