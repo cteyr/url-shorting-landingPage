@@ -13,10 +13,3 @@ input {
     width: 100%;
   }
 }
-::placeholder {
-  position: absolute;
-  transform: translateY(+45%);
-  @media screen and (max-width: 768px) {
-    transform: translateY(+50%);
-  }
-}
